@@ -2,18 +2,20 @@ import { useSelector } from 'react-redux';
 
 import classes from './Subscriptions.module.css';
 
-const Subscriptions = ({subscriptions}) => {
-    // eslint-disable-next-line
-    const listMovies = useSelector(state => state.movies.allMovies);
+import Card from '../card/Card';
 
-    console.log(subscriptions)
+const Subscriptions = ({subscriptions}) => {
+    const listMovies = useSelector(state => state.movies.allMovies);
 
     return(
         <div className={classes.Subscriptions}>
-            {listMovies.map((movie, index) => (
-                movie.subscriptions === subscriptions &&
-                <div key={index}>{movie.title}</div>
-            ))}
+            <div className={classes.Title}>{subscriptions}</div>
+            <div className={classes.Movies}>
+                {listMovies.map((movie, index) => (
+                    movie.subscriptions === subscriptions &&
+                    <Card key={index} movie={movie}/>
+                ))}
+            </div>
         </div>
     );
 };

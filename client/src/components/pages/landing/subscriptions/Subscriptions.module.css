@@ -1,3 +1,18 @@
 .Subscriptions {
     display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.Title {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.Movies {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }

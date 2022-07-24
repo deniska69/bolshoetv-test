@@ -1,0 +1,18 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+}
+
+.Image {
+    max-width: 12.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Title {
+    color: #fff;
+}
+
+.Genre {
+    color: #565757;
+}
