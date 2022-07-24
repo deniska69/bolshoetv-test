@@ -1,3 +1,3 @@
-### Тестовое задание на позицию:
+### Test task for the position:
 
-### "React Разработчик"
+### "React Developer"
