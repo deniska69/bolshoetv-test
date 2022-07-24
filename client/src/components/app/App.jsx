@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { getAllMovies } from '../../actions/movies';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Landing from '../pages/landing/Landing';
 

@@ -9,9 +9,9 @@ const defaultState = {
 export default function appReducer(state = defaultState, action) {
     switch (action.type) {
         case SET_ONE_MOVIE:
-            return {...state, movies: action.payload};
+            return {...state, movie: action.payload};
         case SET_ALL_MOVIES:
-            return {...state, movies: action.payload};
+            return {...state, allMovies: action.payload};
         default:
             return state
     }

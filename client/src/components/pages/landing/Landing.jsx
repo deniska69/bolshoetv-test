@@ -1,9 +1,15 @@
-//import classes from './Landing.module.css';
+import { useSelector } from 'react-redux';
+
+import classes from './Landing.module.css';
 
 const Landing = () => {
+    const listMovies = useSelector(state => state.movies.allMovies);
+
     return(
-        <div>
-            Главная страница
+        <div className={classes.Landing}>
+            {listMovies.map((movie, index) => (
+                <div key={index}>{movie.title}</div>
+            ))}
         </div>
     );
 };
