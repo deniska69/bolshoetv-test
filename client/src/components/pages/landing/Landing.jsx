@@ -1,4 +1,4 @@
-import classes from './Landing.module.css';
+//import classes from './Landing.module.css';
 
 const Landing = () => {
     return(

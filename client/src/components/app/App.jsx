@@ -1,20 +1,24 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import classes from './App.module.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { getAllMovies } from '../../actions/movies';
+
+import Landing from '../pages/landing/Landing';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getAllMovies);
+    dispatch(getAllMovies());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className={classes.App}>
-      Большое ТВ
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
