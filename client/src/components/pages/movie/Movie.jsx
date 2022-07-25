@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import classes from './Movie.module.css';
-// eslint-disable-next-line
 import Content from './content/Content';
 
 const Movie = () => {
@@ -18,7 +17,7 @@ const Movie = () => {
     },[]);
 
     useEffect(()=>{
-        if(id && rk){
+        if(id){
             setIsURL(true);
         };
 
@@ -26,7 +25,7 @@ const Movie = () => {
 
     return(
         <div className={classes.Movie}>
-            {isURL && <div>{id}-{rk}</div>}
+            {isURL && <Content id={id} rk={rk} />}
             {!isURL && <div>Ошибка параметров запроса</div>}
         </div>
     );

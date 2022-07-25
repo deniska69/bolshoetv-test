@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 // import { API_URL } from '../../../../core/config';
 
@@ -6,31 +6,34 @@ import classes from './Content.module.css';
 
 const Content = ({id, rk}) => {
     const listMovies = useSelector(state => state.movies.allMovies);
-    const [isMovie, setIsMovie] = useState(false);
     const [movie, setMovie] = useState();
+    
 
-    for (let i = 0; i < listMovies.length; i++) {
-        if(listMovies[i].id === id){
-            setMovie(listMovies[i]);
-            setIsMovie(true);
+    useEffect(()=>{
+        if(listMovies.length > 0){
+            setMovie(listMovies.find(item => item.id === id));
         }
-    };
+        
+        // eslint-disable-next-line
+    },[listMovies]);
+    
 
-    if(isMovie){
-        return(
-            <div className={classes.Movie}>
-                <div className={classes.Title}>
-                    Фильм найден.
-                </div>
+    useEffect(()=>{
+        if(movie){
+            console.log(movie);
+        }
+        // eslint-disable-next-line
+    },[movie]);
+
+    
+
+    return(
+        <div className={classes.Movie}>
+            <div className={classes.Title}>
+                Фильм найден.
             </div>
-        );
-    } else {
-        return(
-            <div className={classes.Movie}>
-                Фильм не найден.
-            </div>
-        );
-    }
+        </div>
+    );
 };
 
 export default Content;
