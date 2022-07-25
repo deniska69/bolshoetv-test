@@ -3,13 +3,8 @@
     flex-direction: column;
     width: 100%;
     max-width: 600px;
-    gap: 0.5rem;
-}
-
-@media (max-width: 599px) {
-    .Content {
-        padding: 6vw;
-    }
+    gap: 1rem;
+    padding: 6vw;
 }
 
 .Title {
@@ -22,4 +17,21 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
+}
+
+.Trailer {
+    display: flex;
+}
+
+@media (max-width: 599px) {
+    .Trailer {
+        margin-left: -6vw;
+        margin-right: -6vw;
+    }
+}
+
+.Trailer iframe {
+    border: none;
+    width: 100%;
+    aspect-ratio: 16/9;
 }

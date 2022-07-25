@@ -1,4 +1,4 @@
-// import { API_URL } from '../../../../core/config';
+//import { API_URL } from '../../../../core/config';
 
 import classes from './Content.module.css';
 import Badge from '../../../ui/badge/Badge';
@@ -16,6 +16,9 @@ const Content = ({movie}) => {
                 <Badge>{movie.country}</Badge>
                 <Badge>{movie.genre}</Badge>
                 <Badge>{movie.rating_age}</Badge>
+            </div>
+            <div className={classes.Trailer}>
+                <iframe src={movie.trailer} title={movie.title}/>
             </div>
         </div>
     );
