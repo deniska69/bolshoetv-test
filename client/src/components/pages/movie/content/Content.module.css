@@ -1,9 +1,25 @@
 .Content {
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 600px;
+    gap: 0.5rem;
+}
+
+@media (max-width: 599px) {
+    .Content {
+        padding: 6vw;
+    }
 }
 
 .Title {
     color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
 }

@@ -1,0 +1,8 @@
+.Badge {
+    display: flex;
+    background-color: #4a421c;
+    color: #ffcc00;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    padding: 0.05rem 0.2rem 0.2rem 0.2rem;
+}
