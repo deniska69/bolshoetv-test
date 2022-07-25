@@ -1,10 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../../../../core/config';
 
 import classes from './Card.module.css';
 
 const Card = ({movie}) => {
+    const navigate = useNavigate();
+
+    const clickToCard = () => {
+        navigate(`/film?id=${movie.id}`);
+    }
+
     return(
-        <div className={classes.Card}>
+        <div className={classes.Card} onClick={() => clickToCard()}>
             <img className={classes.Image} 
                  src={`${API_URL + '\\movies\\' + movie.image}`} 
                  alt={movie.title} />

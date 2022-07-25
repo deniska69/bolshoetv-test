@@ -8,7 +8,7 @@
 }
 
 .Title {
-    color: #fff;
+    color: #e9eaea;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -41,4 +41,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.Description {
+    display: flex;
+    color: #e9eaea;
 }

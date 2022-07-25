@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+.Card:hover {
+    cursor: pointer;
+}
 
 .Image {
     max-width: 12.5rem;
@@ -10,7 +13,7 @@
 }
 
 .Title {
-    color: #fff;
+    color: #e9eaea;
 }
 
 .Genre {

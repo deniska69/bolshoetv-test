@@ -28,6 +28,9 @@ const Content = ({movie, campaign_id}) => {
                         campaign_id={campaign_id} 
                         content_id={movie.id} />
             </div>
+            <div className={classes.Description}>
+                {movie.description}
+            </div>
         </div>
     );
 };
