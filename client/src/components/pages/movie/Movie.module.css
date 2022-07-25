@@ -1,7 +1,5 @@
 .Movie {
     display: flex;
-}
-
-.Title {
-    color: #fff;
+    justify-content: center;
+    min-height: 100vh;
 }
