@@ -23,4 +23,5 @@
     column-gap: 1rem;
     flex-wrap: nowrap;
     overflow-x: auto;
+    padding-bottom: 2rem;
 }
