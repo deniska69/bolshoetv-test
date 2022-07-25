@@ -4,6 +4,14 @@
     row-gap: 1rem;
 }
 
+.Subscriptions:first-child {
+    margin-top: 2rem;
+}
+
+.Subscriptions:last-child {
+    margin-bottom: 2rem;
+}
+
 .Title {
     color: #fff;
     font-size: 2rem;
