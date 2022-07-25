@@ -35,3 +35,10 @@
     width: 100%;
     aspect-ratio: 16/9;
 }
+
+.AppButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

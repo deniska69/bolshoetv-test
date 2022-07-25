@@ -1,9 +1,8 @@
-//import { API_URL } from '../../../../core/config';
-
 import classes from './Content.module.css';
 import Badge from '../../../ui/badge/Badge';
+import Button from '../../../ui/button/Button';
 
-const Content = ({movie}) => {
+const Content = ({movie, campaign_id}) => {
 
     return(
         <div className={classes.Content}>
@@ -18,7 +17,16 @@ const Content = ({movie}) => {
                 <Badge>{movie.rating_age}</Badge>
             </div>
             <div className={classes.Trailer}>
-                <iframe src={movie.trailer} title={movie.title}/>
+                <iframe src={movie.trailer} 
+                        title={movie.title}/>
+            </div>
+            <div className={classes.AppButtons}>
+                <Button className={'AppStore'} 
+                        campaign_id={campaign_id} 
+                        content_id={movie.id} />
+                <Button className={'GooglePlay'} 
+                        campaign_id={campaign_id} 
+                        content_id={movie.id} />
             </div>
         </div>
     );

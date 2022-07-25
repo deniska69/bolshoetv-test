@@ -1,0 +1,35 @@
+.AppStore {
+  display: flex;
+  width: 15vw;
+  max-width: 600px;
+  max-height: 172px;
+}
+
+@media (max-width: 599px) {
+  .AppStore {
+    width: 40vw;
+  }
+}
+
+.AppStore img {
+  width: inherit;
+  border-radius: 0.5rem;
+}
+
+.GooglePlay {
+  display: flex;
+  width: 15vw;
+  max-width: 600px;
+  max-height: 172px;
+}
+
+@media (max-width: 599px) {
+  .GooglePlay {
+    width: 40vw;
+  }
+}
+
+.GooglePlay img {
+  width: inherit;
+  border-radius: 0.5rem;
+}

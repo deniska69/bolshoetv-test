@@ -29,7 +29,7 @@ const Movie = () => {
 
     return(
         <div className={classes.Movie}>
-            {isURL && <Content movie={movie} rk={rk} />}
+            {isURL && <Content movie={movie} campaign_id={rk}/>}
             {!isURL && <div>Ошибка параметров запроса</div>}
         </div>
     );

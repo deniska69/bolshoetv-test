@@ -5,7 +5,9 @@ import classes from './Card.module.css';
 const Card = ({movie}) => {
     return(
         <div className={classes.Card}>
-            <img className={classes.Image} src={`${API_URL + '\\movies\\' + movie.image}`} alt={movie.title} />
+            <img className={classes.Image} 
+                 src={`${API_URL + '\\movies\\' + movie.image}`} 
+                 alt={movie.title} />
             <div className={classes.Title}>
                 {movie.title}
             </div>
