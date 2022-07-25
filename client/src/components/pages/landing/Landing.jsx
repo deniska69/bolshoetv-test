@@ -20,6 +20,8 @@ const Landing = () => {
 
     return(
         <div className={classes.Landing}>
+            <div>Большое ТВ</div>
+            <div>{listMovies.length}</div>
             {listSubscriptions.map((subscription, index) => (
                 <Subscriptions key={index} subscriptions={subscription} />
             ))}

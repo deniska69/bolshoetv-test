@@ -7,8 +7,10 @@ export const getAllMovies = () => {
         try {
             const response = await axios.get(`${API_URL}api/allMovies`);
             dispatch(setAllMovies(response.data.movies));
+            alert(response.data.movies.length)
         } catch (e) {
             console.log(e);
+            alert(e)
         }
     };
 };
