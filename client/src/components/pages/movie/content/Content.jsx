@@ -1,11 +1,20 @@
+import { useNavigate } from 'react-router-dom';
+
 import classes from './Content.module.css';
 import Badge from '../../../ui/badge/Badge';
 import Button from '../../../ui/button/Button';
 
 const Content = ({movie, campaign_id}) => {
+    const navigate = useNavigate();
+
+    const clickToBtnBack= () => {
+        navigate(`/`);
+    }
 
     return(
         <div className={classes.Content}>
+            <Button className={'Back'} 
+                    onClick={() => clickToBtnBack()} />
             <div className={classes.Title}>
                 {movie.title}
             </div>
