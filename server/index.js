@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const config = require("config");
 const moviesRouter = require("./routes/movies.routes");
+const visitorsRouter = require("./routes/visitors.routes");
 const corsMiddleware = require("./middleware/cors.middleware");
 const PORT = config.get("serverPort");
 const URL_DB = config.get("dbUrl");
@@ -12,6 +13,7 @@ app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.static("static"));
 app.use("/api", moviesRouter);
+app.use("/api", visitorsRouter);
 
 const start = async () => {
   try {
