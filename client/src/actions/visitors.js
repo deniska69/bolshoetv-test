@@ -5,7 +5,7 @@ import { store } from '../reducers';
 
 export const visitorsInfo = (event) => {
     return async dispatch => {
-        try {
+        try {           
             const responseIPv4 = await axios.get(`https://geolocation-db.com/json/`);
             dispatch(setIP(responseIPv4.data.IPv4));
 

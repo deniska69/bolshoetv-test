@@ -9,7 +9,8 @@ const Button = ({ className, onClick, campaign_id, content_id }) => {
       <a className={className === 'AppStore' ? classes.AppStore : classes.GooglePlay} 
          href={`https://bolshoe.app.link/WujiUvQIMrb?campaign_id=${campaign_id}&content_id=${content_id}`}
          target='_blank'
-         rel='noreferrer'>
+         rel='noreferrer'
+         onClick={() => onClick()}>
         <img className={classes.Image} 
              src={className === 'AppStore' ? imageAppStore : imageGooglePlay} 
              alt={content_id} />
